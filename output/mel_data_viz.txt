@@ -1,0 +1,83 @@
+--------------Data Set Counts:-----------------
+Train Data:  (33126, 8)
+Test Data: (10982, 5)
+--------------Preview Train Data:-----------------
+     image_name  patient_id     sex  ...  diagnosis benign_malignant target
+0  ISIC_2637011  IP_7279968    male  ...    unknown           benign      0
+1  ISIC_0015719  IP_3075186  female  ...    unknown           benign      0
+2  ISIC_0052212  IP_2842074  female  ...      nevus           benign      0
+3  ISIC_0068279  IP_6890425  female  ...    unknown           benign      0
+4  ISIC_0074268  IP_8723313  female  ...    unknown           benign      0
+
+[5 rows x 8 columns]
+--------------Preview Train Data Columns:-----------------
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 33126 entries, 0 to 33125
+Data columns (total 8 columns):
+ #   Column                         Non-Null Count  Dtype  
+---  ------                         --------------  -----  
+ 0   image_name                     33126 non-null  object 
+ 1   patient_id                     33126 non-null  object 
+ 2   sex                            33061 non-null  object 
+ 3   age_approx                     33058 non-null  float64
+ 4   anatom_site_general_challenge  32599 non-null  object 
+ 5   diagnosis                      33126 non-null  object 
+ 6   benign_malignant               33126 non-null  object 
+ 7   target                         33126 non-null  int64  
+dtypes: float64(1), int64(1), object(6)
+memory usage: 2.0+ MB
+None
+     image_name  patient_id     sex  age_approx anatom_site_general_challenge
+0  ISIC_0052060  IP_3579794    male        70.0                           NaN
+1  ISIC_0052349  IP_7782715    male        40.0               lower extremity
+2  ISIC_0058510  IP_7960270  female        55.0                         torso
+3  ISIC_0073313  IP_6375035  female        50.0                         torso
+4  ISIC_0073502  IP_0589375  female        45.0               lower extremity
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 10982 entries, 0 to 10981
+Data columns (total 5 columns):
+ #   Column                         Non-Null Count  Dtype  
+---  ------                         --------------  -----  
+ 0   image_name                     10982 non-null  object 
+ 1   patient_id                     10982 non-null  object 
+ 2   sex                            10982 non-null  object 
+ 3   age_approx                     10982 non-null  float64
+ 4   anatom_site_general_challenge  10631 non-null  object 
+dtypes: float64(1), object(4)
+memory usage: 429.1+ KB
+None
+--------------Data Seggregation - Benign vs Malignant:-----------------
+benign       0.98237
+malignant    0.01763
+Name: benign_malignant, dtype: float64
+--------------Data Variations (Sex, Age.. etc):-----------------
+male      0.516621
+female    0.483379
+Name: sex, dtype: float64
+sex
+female    0.013766
+male      0.021311
+Name: target, dtype: float64
+--------------Data Segregation By Age:-----------------
+age_approx
+0.0     0.000000
+10.0    0.000000
+15.0    0.015152
+20.0    0.009160
+25.0    0.010363
+30.0    0.010178
+35.0    0.008772
+40.0    0.006711
+45.0    0.012091
+50.0    0.012412
+55.0    0.016736
+60.0    0.020062
+65.0    0.027701
+70.0    0.029472
+75.0    0.063201
+80.0    0.085919
+85.0    0.060403
+90.0    0.200000
+Name: target, dtype: float64
+--------------Data Seggregation By Body Part:-----------------
+--------------Process finished with exit code 0:-----------------
